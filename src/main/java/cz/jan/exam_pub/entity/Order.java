@@ -1,7 +1,6 @@
 package cz.jan.exam_pub.entity;
 
 import jakarta.persistence.*;
-
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
@@ -30,8 +29,7 @@ public class Order {
     @Column(name = "created_at", nullable = false)
     private LocalDateTime createdAt;
 
-    protected Order() {
-    }
+    protected Order() {}
 
     public Order(User user, Product product, int amount) {
         this.user = user;
@@ -45,10 +43,27 @@ public class Order {
         return unitPrice.multiply(BigDecimal.valueOf(amount));
     }
 
-    public Long getId() { return id; }
-    public User getUser() { return user; }
-    public Product getProduct() { return product; }
-    public int getAmount() { return amount; }
-    public BigDecimal getUnitPrice() { return unitPrice; }
-    public LocalDateTime getCreatedAt() { return createdAt; }
+    public Long getId() {
+        return id;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public Product getProduct() {
+        return product;
+    }
+
+    public int getAmount() {
+        return amount;
+    }
+
+    public BigDecimal getUnitPrice() {
+        return unitPrice;
+    }
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
 }

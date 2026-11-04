@@ -1,7 +1,6 @@
 package cz.jan.exam_pub.entity;
 
 import jakarta.persistence.*;
-
 import java.math.BigDecimal;
 
 @Entity
@@ -21,11 +20,21 @@ public class Product {
     @Column(name = "is_for_adult", nullable = false)
     private boolean forAdult;
 
-    protected Product() {
+    protected Product() {}
+
+    public Long getId() {
+        return id;
     }
 
-    public Long getId() { return id; }
-    public String getName() { return name; }
-    public BigDecimal getPrice() { return price; }
-    public boolean isForAdult() { return forAdult; }
+    public String getName() {
+        return name;
+    }
+
+    public BigDecimal getPrice() {
+        return price;
+    }
+
+    public boolean isForAdult() {
+        return forAdult;
+    }
 }
