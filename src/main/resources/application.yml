@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: exam-pub
+  datasource:
+    url: jdbc:mysql://localhost:3306/exam_pub
+    username: ${DB_USERNAME:pub}
+    password: ${DB_PASSWORD:pub}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
